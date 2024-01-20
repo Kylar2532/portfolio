@@ -17,16 +17,47 @@
 
   <div id="nav-bar">
     <table>
-      <th onclick="document.location='about-me.html'">About Me
-      <!-- <th onclick="document.location='https://kylar2532.github.io/portfolio/about-me.html'">About Me -->
-      </th>
-      <th>Animation</th>
-      <th>Experience</th>
-      <th>Projects</th>
+      <tr>
+        <th onclick="document.location='about-me.html'">
+          About Me</th>
+
+        <th onmouseenter="show('animation-examples')">
+          Animation</th>
+
+        <th onclick="document.location='experience.html'">
+          Experience</th>
+
+        <th onmouseenter="show('project-examples')">
+          Projects</th>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td class="animation-examples">Example 1</td>
+        <td></td>
+        <td class="project-examples">Example 1</td>
+      </tr>
+      
     </table>
   </div>
 
-  
+  <script>
+    function show(class_name) {
+      const eles = document.getElementById("nav-bar").getElementsByClassName(class_name);
+      for (let e = 0; e < eles.length; e++) {
+        eles[e].style.backgroundColor = "aquamarine";
+        eles[e].style.color = "black";
+      }
+    }
+
+    function hide(class_name) {
+      const eles = document.getElementById("nav-bar").getElementsByClassName(class_name);
+      for (let e = 0; e < eles.length; e++) {
+        eles[e].style.backgroundColor = "white";
+        eles[e].style.color = "white";
+      }
+    }
+  </script>
   
 </body>
 
