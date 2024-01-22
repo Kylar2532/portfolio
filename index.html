@@ -11,53 +11,30 @@
 
 <body>
   <header>
-    <h1 class="header">Alexander Grey</h1>
-    <h3 class="header">Animator | Functional Programmer | Educator</h3>
+    <div><h1>Alexander Grey</h1></div>
+    <div><h3>Animator | Functional Programmer | Educator</h3></div>
+
+    <div id="nav-bar">
+      <ul>
+        <li onclick="document.location='about-me.html'">About Me</li>
+        <li class="dropdown">Animation
+          <div class="drop-nav">
+            <a href="file://wsl.localhost/Ubuntu/home/kylar/portfolio/about-me.html">Animation Example 1</a>
+            <a href="file://wsl.localhost/Ubuntu/home/kylar/portfolio/about-me.html">Animation Example 2</a>
+            <a href="file://wsl.localhost/Ubuntu/home/kylar/portfolio/about-me.html">Animation Example 3</a>
+          </div>
+        </li>
+        <li onclick="document.location='experience.html'">Experience</li>
+        <li class="dropdown">Projects
+          <div class="drop-nav">
+            <a href="file://wsl.localhost/Ubuntu/home/kylar/portfolio/about-me.html">Project Example 1</a>
+            <a href="file://wsl.localhost/Ubuntu/home/kylar/portfolio/about-me.html">Project Example 2</a>
+            <a href="file://wsl.localhost/Ubuntu/home/kylar/portfolio/about-me.html">Project Example 3</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </header>
-
-  <div id="nav-bar">
-    <table>
-      <tr>
-        <th onclick="document.location='about-me.html'">
-          About Me</th>
-
-        <th onmouseenter="show('animation-examples')">
-          Animation</th>
-
-        <th onclick="document.location='experience.html'">
-          Experience</th>
-
-        <th onmouseenter="show('project-examples')">
-          Projects</th>
-      </tr>
-
-      <tr>
-        <td></td>
-        <td class="animation-examples">Example 1</td>
-        <td></td>
-        <td class="project-examples">Example 1</td>
-      </tr>
-      
-    </table>
-  </div>
-
-  <script>
-    function show(class_name) {
-      const eles = document.getElementById("nav-bar").getElementsByClassName(class_name);
-      for (let e = 0; e < eles.length; e++) {
-        eles[e].style.backgroundColor = "aquamarine";
-        eles[e].style.color = "black";
-      }
-    }
-
-    function hide(class_name) {
-      const eles = document.getElementById("nav-bar").getElementsByClassName(class_name);
-      for (let e = 0; e < eles.length; e++) {
-        eles[e].style.backgroundColor = "white";
-        eles[e].style.color = "white";
-      }
-    }
-  </script>
   
 </body>
 

@@ -2,64 +2,93 @@
  * Global variables
  */
 :root {
-  --bg-color: white;
+  --bg-color: rgb(255, 229, 199);
+  --copy-color: rgb(71, 71, 71);
+  --secondary-copy-color: rgb(245, 245, 245);
+  --primary-color: rgb(82, 183, 123);
+  --primary-color-darkened:rgb(42, 101, 66);
+  --secondary-color: rgb(169, 219, 189);
+  --secondary-color-darkened: rgb(140, 207, 167);
 }
 
 /* 
  * General
  */
 
-/* body {
-  font-family: Garamond, serif;
-} */
+body {
+  background-color: var(--bg-color);
+  color: var(--copy-color);
+  /* font-family: Garamond, serif; */
+}
 
 /* 
  * Navigation bar
  */
-#nav-bar table {
+#nav-bar {
+  width: 100%;
+  font-weight: bold;
+}
+#nav-bar ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  width: 100%;
-  background-color: aquamarine;
-  color: black;
-  text-align: center;
-  border-collapse: collapse;
-  border: none;
 }
 
-#nav-bar th {
+#nav-bar li {
+  background-color: var(--primary-color);
+  float: left;
   width: 25%;
+  padding: 0.5em 0;
 }
 
-#nav-bar th a {
+#nav-bar li a {
   text-decoration: none;
 }
 
-#nav-bar td {
-  background-color: var(--bg-color);
-  color: var(--bg-color);
+#nav-bar li:hover {
+  background-color: var(--primary-color-darkened);
+  color: var(--secondary-copy-color);
 }
 
-#nav-bar th:hover { 
-/* #nav-bar td.animation-examples:hover, 
-#nav-bar td.project-examples:hover { */
-  background-color: rgb(0, 248, 165) !important;
+.dropdown {
+  display: inline-block;
+  z-index: 1;
 }
 
-.animation-examples {
-  background-color: var(--bg-color);
-  color: var(--bg-color);
+.drop-nav {
+  background-color: var(--secondary-color);
+  color: var(--copy-color);
+  display: none;
+  margin-top: 0.5em;
+  position: absolute;
+  width: 25%;
 }
 
-.project-examples {
-  background-color: var(--bg-color);
-  color: var(--bg-color);
+.dropdown:hover .drop-nav {
+  display: block;
+}
+
+.drop-nav a {
+  color: var(--copy-color);
+  display: block;
+  font-weight: normal;
+  padding: 0.5em 0;
+  text-decoration: none;
+}
+
+.drop-nav a:hover { 
+  background-color: var(--secondary-color-darkened);
 }
 
 /* 
  * Header
  */
-.header {
+header {
+  color: var(--copy-color);
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
   text-align: center;
+  width: 100%;
 }
