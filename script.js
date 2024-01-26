@@ -1,1 +1,0 @@
-// Add in "update pos" function to track track column location

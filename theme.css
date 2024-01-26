@@ -1,8 +1,9 @@
 /* 
- * Global variables
+ * Global Variables
  */
 :root {
-  --bg-color: rgb(255, 229, 199);
+  --bg-color: rgb(255, 228, 179);
+  --bg-color-darkened: rgb(255, 179, 38);
   --copy-color: rgb(71, 71, 71);
   --secondary-copy-color: rgb(245, 245, 245);
   --primary-color: rgb(82, 183, 123);
@@ -22,7 +23,7 @@ body {
 }
 
 /* 
- * Navigation bar
+ * Navigation Bar
  */
 #nav-bar {
   width: 100%;
@@ -34,10 +35,18 @@ body {
   padding: 0;
 }
 
+#nav-bar li:first-of-type {
+  background-color: var(--primary-color);
+  border-left: none;
+  float: left;
+  width: 8%;
+  padding: 0.5em 0;
+}
+
 #nav-bar li {
   background-color: var(--primary-color);
   float: left;
-  width: 25%;
+  width: 23%;
   padding: 0.5em 0;
 }
 
@@ -48,6 +57,10 @@ body {
 #nav-bar li:hover {
   background-color: var(--primary-color-darkened);
   color: var(--secondary-copy-color);
+}
+
+#nav-bar #active {
+  background-color: var(--bg-color-darkened);
 }
 
 .dropdown {
@@ -61,7 +74,7 @@ body {
   display: none;
   margin-top: 0.5em;
   position: absolute;
-  width: 25%;
+  width: 23%;
 }
 
 .dropdown:hover .drop-nav {
@@ -91,4 +104,35 @@ header {
   position: fixed;
   text-align: center;
   width: 100%;
+}
+
+/* 
+ * Main Content
+ */
+
+#content {
+  position: relative;
+  top: 15em;
+  width:100%;
+}
+
+.one-col {
+  float: left;
+  width: 95%;
+}
+
+.one-col p, .one-col h4 {
+  padding: 0 5em;
+  text-align: left;
+}
+
+.two-col {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.two-col p {
+  padding: 0.5em 5em;
+  text-align: left;
 }
