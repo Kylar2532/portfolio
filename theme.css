@@ -2,7 +2,7 @@
  * Global Variables
  */
 :root {
-  --bg-color: rgb(255, 228, 179);
+  --bg-color: rgb(255, 237, 204);
   --bg-color-darkened: rgb(255, 179, 38);
   --copy-color: rgb(71, 71, 71);
   --secondary-copy-color: rgb(245, 245, 245);
@@ -133,6 +133,14 @@ header {
 }
 
 .two-col p {
+  margin-right: 5em;
   padding: 0.5em 5em;
   text-align: left;
+}
+
+.headshot img {
+  border: 2px solid var(--primary-color-darkened);
+  box-shadow: 5px 5px 5px rgb(62, 137, 92), 10px 10px 10px var(--primary-color-darkened), 15px 15px 15px var(--copy-color);
+  height: 600px;
+  width: 450px;
 }
